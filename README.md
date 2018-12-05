@@ -2,7 +2,8 @@
 
 A simple SpringBoot application that uses TestNG and Selenium for it's test harness.  These tests represent acceptance tests and don't require the full Spring context to load when running the tests.  Really, these tests should probably be in their own project.
 
-# Build executable JAR called spring-boot-http and place in /target folder.  Note that in the pom.xml file we've include a special build plugin that will produce an extra JAR with the test classes.
+# Build executable JAR 
+Place myproject-SNAPSHOT.jar and place in /target folder. Note that in the pom.xml file we've include a special build plugin that will produce an extra JAR with the test classes.
 
 `mvn clean && mvn package`
 

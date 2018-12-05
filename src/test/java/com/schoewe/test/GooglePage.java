@@ -39,9 +39,10 @@ public class GooglePage {
 
   public void searchFor(String text) throws InterruptedException {
       this.searchBox.sendKeys(text);
-      wait.until(ExpectedConditions.elementToBeClickable(this.searchButton));
-      this.searchButton.click();
-      wait.until(ExpectedConditions.presenceOfElementLocated(By.className("rc")));
+      //TODO
+//      wait.until(ExpectedConditions.elementToBeClickable(this.searchButton));
+//      this.searchButton.click();
+//      wait.until(ExpectedConditions.presenceOfElementLocated(By.className("rc")));
   }
 
   public List<WebElement> getResults() {
