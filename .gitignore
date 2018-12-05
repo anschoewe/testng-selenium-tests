@@ -51,5 +51,10 @@ local.properties
 .cache-main
 .scala_dependencies
 .worksheet
+
+# ARS excludes
 /target/
 /testng-lib/
+.classpath
+.project
+
