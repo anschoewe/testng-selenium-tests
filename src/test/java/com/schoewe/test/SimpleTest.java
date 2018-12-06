@@ -13,8 +13,18 @@ import org.testng.annotations.Test;
 //@SpringBootTest
 public class SimpleTest // extends AbstractTestNGSpringContextTests
 {
-	@Test
-	public void testMod() {
-		Assert.assertTrue(true);
-	}
+  @Test
+  public void testMethodOne() {
+     Assert.assertTrue(true);
+  }
+	  
+  @Test
+  public void testMethodTwo() {
+     Assert.assertTrue(true);
+  }
+	  
+  @Test(dependsOnMethods = {"testMethodTwo"})
+  public void testMethodThree() {
+     Assert.assertTrue(true);
+  }
 }

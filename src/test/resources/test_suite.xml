@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="suite" parallel="classes" thread-count="2">
-<!--     <listeners>
-	    <listener class-name="com.baeldung.reports.CustomisedReports" />
-    </listeners> -->
+		<listeners>
+	    <listener class-name="com.schoewe.test.CustomReporter" />
+    </listeners>
     <test name="test suite">
 	    <classes>
 	        <class name="com.schoewe.test.SimpleTest" />
