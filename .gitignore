@@ -57,4 +57,5 @@ local.properties
 /testng-lib/
 .classpath
 .project
-
+acceptance-test-results.txt
+/test-output/

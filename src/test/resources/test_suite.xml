@@ -1,11 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="suite" parallel="classes" thread-count="2">
-		<listeners>
+<!-- 	<listeners>
 	    <listener class-name="com.schoewe.test.CustomReporter" />
-    </listeners>
+    </listeners> -->
     <test name="test suite">
 	    <classes>
-	        <class name="com.schoewe.test.SimpleTest" />
+	        <class name="com.schoewe.test.GoogleTest" />
         </classes>
     </test>
 </suite>

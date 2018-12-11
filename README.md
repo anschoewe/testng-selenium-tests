@@ -7,6 +7,17 @@ Place myproject-SNAPSHOT.jar and place in /target folder. Note that in the pom.x
 
 `mvn clean package -DskipTests`
 
+# Optional, build JAR and execute tests using Maven
+You can build the project and also run the tests through Maven.  In order to do this, you'll need to download the Selenium Chrome Driver and tell your tests where to find it.
+
+```
+mkdir -p testng-lib && cd testng-lib
+wget -N https://chromedriver.storage.googleapis.com/2.45/chromedriver_mac64.zip
+unzip -o chromedriver_mac64.zip && rm chromedriver_mac64.zip && chmod +x chromedriver
+cd ..
+mvn clean package -DargLine="-Dwebdriver.chrome.driver=$(pwd)/testng-lib/chromedriver"
+```
+
 # Build docker image
 Run this in the main project folder 'spring-boot-http')
 
@@ -19,6 +30,7 @@ Look in the Dockerfile to see the contents of this image.  It's based on OpenDJK
 `docker run --rm -it --name testng-selenium-tests testng-selenium-tests`
 
 # Or, Run as a script (useful for Jenkin's build step for parsing result)
+This only works if you've modified the test_suite.xml file to register our CustomReporter class as a listener.
 
 ```
 #!/bin/bash
