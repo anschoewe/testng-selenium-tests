@@ -8,7 +8,7 @@ Place myproject-SNAPSHOT.jar and place in /target folder. Note that in the pom.x
 `mvn clean package -DskipTests`
 
 # Optional, build JAR and execute tests using Maven
-You can build the project and also run the tests through Maven.  In order to do this, you'll need to download the Selenium Chrome Driver and tell your tests where to find it.
+You can build the project and also run the tests through Maven.  In order to do this, you'll need to download the Selenium Chrome Driver and tell your tests where to find it.  The below example works on a Mac.  If running on Linux or Windows, substitute in the correct Chrome Driver.
 
 ```
 mkdir -p testng-lib && cd testng-lib
