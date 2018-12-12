@@ -25,7 +25,7 @@ Look in the Dockerfile to see the contents of this image.  It's based on OpenDJK
 
 `docker build -t testng-selenium-tests .`
 
-# Run docker container in the background (interactive).  The tests will be run automatically.  The container is automatically deleted when finished running.
+# Run docker container in the foreground (interactive).  The tests will be run automatically.  The container is automatically deleted when finished running.
 
 `docker run --rm -it --name testng-selenium-tests testng-selenium-tests`
 
